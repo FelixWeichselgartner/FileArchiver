@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template, send_file
-from FileArchiver import FileArchiver
+from FileArchiver.FileArchiver import FileArchiver
 
 
 app = Flask(__name__)
@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/get-files/', methods=['GET'])
 def get_files():
-    fa = FileArchiver()
+    fa = FileArchiver('files.txt')
     return send_file(fa.today(), download_name=fa.today())
 
 
