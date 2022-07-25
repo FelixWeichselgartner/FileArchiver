@@ -1,7 +1,7 @@
-*.txt
 __pycache__/
 *.zip
 2022*/
 build/
 dist/
 FileArchiver.egg-info/
+files*.txt
